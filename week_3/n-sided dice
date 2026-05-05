@@ -1,0 +1,13 @@
+import random
+
+def main():
+    dice_side= input("How many sides does your dice have?:")
+    max_value = int(dice_side)
+    min_value= 1
+    roll=random.randint(min_value, max_value)
+    print(f"Your roll is {roll}")
+
+    
+
+if __name__ == '__main__':
+    main()
