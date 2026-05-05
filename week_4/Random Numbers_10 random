@@ -1,0 +1,30 @@
+import random
+
+N_NUMBERS = 10
+MIN_VALUE = 1
+MAX_VALUE = 100
+
+def main():
+#method 1- using while loop
+"""
+set value of i to 0
+loop will repeat 10 times(0-9)
+after printing each number, value of 1 will be increased by 1
+so loop runs 10 times
+"""
+    i=0
+    while i<10:
+        number=random.randint(MIN_VALUE, MAX_VALUE)
+        print(number)
+        i=i+1
+
+#method 2 using for loop
+"""
+    for i in range(N_NUMBERS):
+        number=random.randint(MIN_VALUE, MAX_VALUE)
+        print(number)
+"""
+        
+
+if __name__ == '__main__':
+    main()
