@@ -1,0 +1,16 @@
+"""
+Program: Liftoff
+--------------------
+Countdown from 10 to 1 and then print Liftoff!
+"""
+
+def main():
+    i=10
+    #put 0<i, otherwise it'll continue till -ve
+    while 0<i<11:
+        print(i)
+        i=i-1
+    print("Liftoff!")
+
+if __name__ == '__main__':
+    main()
