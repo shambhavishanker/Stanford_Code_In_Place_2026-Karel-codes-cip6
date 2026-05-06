@@ -12,10 +12,15 @@ Code in Place consists of the first half of the CS106A course taught at Stanford
 The following topics are covered in each weekly Section:
 
 -Python basics
+
 -Art of Karel
+
 -Console programming
+
 -Graphics
+
 -Animations
+
 -Lists and Dicts
 
 ## Support
