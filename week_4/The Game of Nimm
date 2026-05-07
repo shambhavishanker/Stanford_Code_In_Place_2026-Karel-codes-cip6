@@ -1,0 +1,65 @@
+def main():
+    print("There are 20 stones left.")
+
+#put value of i as 20 for 20 stones
+#we put everything in a while loop, if value of i is more than 1 and less than 20 then the loop repeats
+    i=20
+    while 0<i<=20:
+
+#1. get p1 user input
+#2. if user input is 1 or 2 then that value gets subtracted from the main value of i(that is, 20)
+#   else if user input is other than 1 or 2, user is asked to enter 1 or 2
+#3. no of stones remaining is printed
+
+        p1_user_input= int(input("Player 1 would you like to remove 1 or 2 stones?"))
+        if p1_user_input==1 or p1_user_input==2:
+            i=i-p1_user_input
+            if i==0:
+                
+                print("Player 2 wins!")
+                break
+            else:
+                print(f"There are {i} stones left.")
+
+            
+        else:
+            p1_user_input= int(input("Please enter 1 or 2:"))
+            if p1_user_input==1 or p1_user_input==2:
+                i=i-p1_user_input
+                if i==0:
+                    
+                    print("Player 1 wins!")
+                    break
+                else:
+                    print(f"There are {i} stones left.")
+                
+            
+  
+#4. next get p2 user input
+#5. if user input is 1 or 2 then that value gets subtracted from the main value of i(that is, 20)
+#   else if user input is other than 1 or 2, user is asked to enter 1 or 2
+#6. no of stones remaining is printed
+
+
+        p2_user_input= int(input("Player 2 would you like to remove 1 or 2 stones?"))
+        if p2_user_input==1 or p2_user_input==2:
+            i=i-p2_user_input
+            if i==0:
+                
+                print("Player 1 wins!")
+            else:
+                print(f"There are {i} stones left.")
+        else:
+            p2_user_input= int(input("Please enter 1 or 2:"))
+            if p2_user_input==1 or p2_user_input==2:
+                i=i-p2_user_input
+                if i==0:
+                    
+                    print("Player 1 wins!")
+                else:
+                    print(f"There are {i} stones left.")
+            
+
+
+if __name__ == '__main__':
+    main()
