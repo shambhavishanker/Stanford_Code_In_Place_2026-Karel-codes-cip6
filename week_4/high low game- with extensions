@@ -1,0 +1,66 @@
+import random
+
+NUM_ROUNDS = 5
+
+def main():
+    print("Welcome to the High-Low Game!")
+    print('--------------------------------')
+    
+    user_score= 0
+
+#play multiple rounds
+#repeats the code for however many rounds we want, 
+#and each time it prints which round is currently going on
+
+    for i in range(NUM_ROUNDS):
+        print(f"Round {i+1}")
+
+
+#milestone 1- generate random number
+        computer_num= random.randint(1,100)
+        user_num= random.randint(1,100)
+        print(f"Your number is {user_num}")
+
+#step 2: get user's number
+        choice= input("Do you think your number is higher or lower than the computer's?: ")
+        
+#if wrong input- safe-guarding
+        while choice != "higher" and choice != "lower":
+            choice= input('Please enter "higher" or "lower": ')
+
+            
+
+#all correct choices: higher and correct, lower and correct and increase user score by one
+
+        if choice== "higher" and user_num>computer_num:
+            print(f"You were right! The computer's number was {computer_num}")
+            user_score += 1
+            #can also use score= score + 1
+        elif choice== "lower" and user_num<computer_num:
+            print(f"You were right! The computer's number was {computer_num}")
+            user_score += 1
+
+#all wrong choices: lower and incorrect, higher and incorrect
+        else:
+            print(f"Aww, that's incorrect. The computer's number was {computer_num}")
+
+#print user score after every round, add blank line
+        print(f"Your score is now {user_score}")
+        print()
+
+#print ending message after all rounds are played/loop ends        
+    print("Thanks for playing!")
+
+
+#extension 2- adding ending messages
+
+    if user_score==NUM_ROUNDS:
+        print("Wow! You played perfectly!")
+#// floor division operator, it removes the decimal part and rounds down to the nearest integer
+    elif user_score >= NUM_ROUNDS//2:
+        print("Good job, you played really well!")
+    else:
+        print("Better luck next time!")
+
+if __name__ == "__main__":
+    main()
